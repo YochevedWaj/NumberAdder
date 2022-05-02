@@ -35,8 +35,8 @@ class PeopleTable extends React.Component {
         this.setState({ people: [] });
     }
 
-    generateTable = (people) => {
-        if (people.length === 0) {
+    generateTable = () => {
+        if (this.state.people.length === 0) {
             return <h1>No people added yet! Add some people!</h1>
         } return (
             <div>
@@ -49,7 +49,7 @@ class PeopleTable extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {people.map((p, k) => <PersonRow person={p} key={k}/>)}
+                        {this.state.people.map((p, k) => <PersonRow person={p} key={k}/>)}
                     </tbody>
                 </table>
             </div>
@@ -67,7 +67,7 @@ class PeopleTable extends React.Component {
                     onClearAllClick={this.onClearAllClick}
                     person={this.state.person} />
 
-                {this.generateTable(this.state.people)}
+                {this.generateTable()}
             </div>
         )
     }
