@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import ReactDom from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import People from './People';
+import PeopleTable from './PeopleTable';
 
-ReactDom.render(<People />, document.getElementById('root'));
+ReactDom.render(<PeopleTable />, document.getElementById('root'));
 
